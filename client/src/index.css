@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+input[type="text"],
+input[type="password"] {
+  border: 2px solid transparent;
+  outline: none;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border: 2px solid #8B5CF6;
+  outline: none;
+}
+
+/* Tabss */
+.content {
+  display: none;
+}
+
+.active-content {
+  display: block;
+}
+
+.message-output {
+  height: 90vh;
+  background-color: white;
+  overflow-y: scroll;
+}
+
+/* dropDownProfile */
+.dropDownProfile.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: .3s ease;
+}
+
+.dropDownProfile.inactive {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: .3s ease;
+}
+
+.dropDownProfile {
+  position: absolute;
+  top: -55px;
+  left: 70px;
+ 
+}
+
+.dropDownProfile ul {
+  border: 1px solid #8B5CF6;
+  border-radius: 8px;
+  padding: 6px 7.5px;
+}
+
+.dropDownProfile ul li {
+  padding: 3px 6px;
+  display: flex; 
+  gap: 6px;
+  align-items: center;
+}
+
+.dropDownProfile ul li:hover {
+  background-color: #8a5cf621;
+  border-radius: 6px;
+  padding: 3px 6px;
+  cursor: pointer;
+}
+
+/* triangle arrow */
+.dropDownProfile::before {
+  content: '';
+  position: absolute;
+  top: 70px;
+  left: -6px;
+  width: 12px;
+  height: 12px;
+  transform: rotate(-45deg);
+  border-left: 1px solid #8B5CF6;
+  border-top: 1px solid #8B5CF6;
+  background-color: white;
+}
+
+/* Scroll bar */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.03);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .1);
+  background-color: #8a5cf689;
+}
